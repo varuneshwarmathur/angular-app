@@ -1,30 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import { StartingPageComponent } from './home/starting-page/starting-page.component';
-import { HomePageComponent } from './home/home-page/home-page.component';
-import { LogoutComponent } from './core/logout/logout.component';
-import { AuthGuard } from './auth.guard';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: StartingPageComponent
-  },
-  {
-    path: 'home',
-    component: HomePageComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'logout',
-    component: LogoutComponent
-  },
-  {
-    path: '**',
-    redirectTo: ''
-  }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
